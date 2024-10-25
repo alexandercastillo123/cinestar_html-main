@@ -2,7 +2,7 @@ const getCines = async()=>{
     const data = await fetch('https://oaemdl.es/cinestar_sweb_php/cines')
     if(data.status==200){
         const cines = await data.json()
-        let html = 'br/><h1>Nuestros Cines</h1><br/>'
+        let html = '<br/><h1>Nuestros Cines</h1><br/>'
         cines.data.forEach(cine => {
            html+= `
            <div class="contenido-cine">
